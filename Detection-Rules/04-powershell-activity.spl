@@ -1,0 +1,5 @@
+source="splunk_security_logs_50_with_description.csv"
+index="main" (event_id=4688 OR event_id=4104)| 
+search (process_name="*powershell*" OR cmd_line="*powershell*")|
+table _time,user_name,process_name,parent_process,cmd_line|
+sort _time

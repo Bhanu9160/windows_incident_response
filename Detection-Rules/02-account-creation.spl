@@ -1,0 +1,4 @@
+source="splunk_security_logs_50_with_description.csv"  
+index="main" event_id=4720| 
+table _time,user_name,workstation| 
+sort _time
